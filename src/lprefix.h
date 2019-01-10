@@ -7,7 +7,13 @@
 #ifndef lprefix_h
 #define lprefix_h
 
-
+#ifdef WITH_JEMALLOC
+#ifdef WIN32
+#include "jemalloc_win.h"
+#else
+#include "jemalloc.h"
+#endif
+#endif
 /*
 ** Allows POSIX/XSI stuff
 */
