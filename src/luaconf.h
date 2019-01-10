@@ -185,6 +185,7 @@
         ".\\lib\\lua?.lua;" LUA_LDIR2"?.lua"
 #define LUA_CPATH_DEFAULT \
 		LUA_CDIR"?.dll;" \
+        LUA_CDIR"..\\lib\\lua\\?.dll;" \
 		LUA_CDIR"..\\lib\\lua\\" LUA_VDIR "\\?.dll;" \
 		LUA_CDIR"loadall.dll;" ".\\?.dll"
 
@@ -290,6 +291,10 @@
 ** You can define it to get all options, or change specific options
 ** to fit your specific needs.
 */
+#define LUA_COMPAT_5_2
+#define LUA_COMPAT_5_1
+
+
 #if defined(LUA_COMPAT_5_2)	/* { */
 
 /*
